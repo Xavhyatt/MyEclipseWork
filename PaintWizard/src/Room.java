@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Room {
 	
@@ -5,8 +6,9 @@ public class Room {
 	
 	public Room(double wallVolume) {
 		this.wallVolume = wallVolume;
-			}
-	
+				
+	}
+
 	public void setWallVolume(double wallVolume) {
 		this.wallVolume = wallVolume;
 	}
