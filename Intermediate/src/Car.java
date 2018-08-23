@@ -5,6 +5,16 @@ public class Car extends Vehicle{
 	private boolean radioOn;
 	private int numberOfSeats;
 	
+	public Car(double engineSize, String make, String colour, int wheels, boolean radioOn, int numberOfSeats) {
+		this.setEngineSize(engineSize);
+		this.setmake(make);
+		this.setColour(colour);
+		this.wheels = wheels;
+		this.radioOn = radioOn;
+		this.numberOfSeats = numberOfSeats;
+		}
+	
+	
 	
 	public void setWheels(int wheels) {
 		this.wheels = wheels;
@@ -33,7 +43,7 @@ public class Car extends Vehicle{
 
 	@Override
 	public String toString() {
-		return "Car [wheels=" + wheels + ", radioOn=" + radioOn + ", numberOfSeats=" + numberOfSeats + "]";
+		return super.toString() + "Car [wheels=" + wheels + ", radioOn=" + radioOn + ", numberOfSeats=" + numberOfSeats + "]";
 	}
 		
 }

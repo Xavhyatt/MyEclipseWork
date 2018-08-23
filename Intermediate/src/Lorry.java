@@ -4,6 +4,14 @@ public class Lorry extends Vehicle {
 	private int capacity;
 	private int height;
 	
+	public Lorry(double engineSize, String make, String colour, int capacity, int height) {
+		this.setEngineSize(engineSize);
+		this.setmake(make);
+		this.setColour(colour);
+		this.capacity = capacity;
+		this.height = height;
+	}
+	
 	public void setCapacity(int capacity) {
 		this.capacity = capacity;
 	}
@@ -20,7 +28,7 @@ public class Lorry extends Vehicle {
 	}
 	@Override
 	public String toString() {
-		return "Lorry [capacity=" + capacity + ", height=" + height + "]";
+		return super.toString() + "Lorry [capacity=" + capacity + ", height=" + height + "]";
 	}
 	
 }

@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 public class RunnerPerson {
 
@@ -6,39 +5,50 @@ public class RunnerPerson {
 	
 	public static void main(String[]args) {
 		
-		Person john = new Person();
-		john.setName("John");
-		john.setAge(31);
-		john.setJobTitle("Chemist");
+		Person john = new Person("John",31,"Chemist");
 		
-		Person tom = new Person();
-		tom.setName("Tom");
-		tom.setAge(34);
-		tom.setJobTitle("Banker");
+		Person tom = new Person("Tom",34,"Banker");
 		
-		Person sara = new Person();
-		sara.setName("Sara");
-		sara.setAge(29);
-		sara.setJobTitle("Doctor");
+		Person sara = new Person("Sara",29,"Doctor");
 		
+		Person p1 = new Person("Jeff", 27, "PT");
 		
-		ArrayList<Object> people = new ArrayList<Object>();
-		people.add(john);
-		people.add(tom);
-		people.add(sara);
+		PersonManager pm1 = new PersonManager();
 		
-		int i;
-		for(i=0; i<people.size(); i++) {
+		pm1.getPeopleList().add(john);
+		pm1.getPeopleList().add(tom);
+		pm1.getPeopleList().add(sara);
+		pm1.getPeopleList().add(p1);
 		
-		System.out.println(people.get(i).toString());
-		}
+		for (Person p : pm1.getPeopleList()) {
+			System.out.println(p);
+		}	
 		
-		for (i=0; i<people.size(); i++) {
+		pm1.searchForName("John");
+		
 			
-			if (((Person) people.get(i)).getName() =="Tom") {
-			System.out.println(((Person) people.get(i)).toString());
-			}
 		}
-	}
+//		pm1.getPeopleList().remove(p1);
+//		for (Person p : pm1.getPeopleList()) {
+//		System.out.println(p);}
+//		
+//		ArrayList<Object> people = new ArrayList<Object>();
+//		people.add(john);
+//		people.add(tom);
+//		people.add(sara);
+		
+//		int i;
+//		for(i=0; i<people.size(); i++) {
+//		
+//		System.out.println(people.get(i).toString());
+//		}
+//		
+//		for (i=0; i<people.size(); i++) {
+//			
+//			if (((Person) people.get(i)).getName() =="Tom") {
+//			System.out.println(((Person) people.get(i)).toString());
+//			}
+//		}
+//	}
 }
 

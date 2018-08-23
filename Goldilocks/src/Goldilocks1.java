@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Goldilocks1 {
 
@@ -25,26 +26,42 @@ public class Goldilocks1 {
 	
 	public static void main(String[]args) {
 		Goldilocks1 gold1 =  new Goldilocks1();
-		Porridge p1 = new Porridge();
-		p1.setPorridgeTemp(90);
+		Random rand = new Random();
 		
-		Chair c1 = new Chair();
-		c1.setWeightCap(297);
+		for (int i=0 ; i<24 ; i++) {
+			
+			Porridge p = new Porridge();
+			Lighting l = new Lighting();
+			Chair c = new Chair();
+			p.setPorridgeTemp(rand.nextInt(200));
+			l.setLight(rand.nextInt(100));
+			c.setWeightCap(rand.nextInt(200));
+			Spot s = new Spot();
+			s.setChair(c);
+			s.setLighting(l);
+			s.setPorridge(p);
+			listOfSpots.add(s);
+		}
 		
-		Lighting l1 = new Lighting();
-		l1.setLight(54);
+			
+//		Porridge p1 = new Porridge();
+//		p1.setPorridgeTemp(90);
+//		
+//		Chair c1 = new Chair();
+//		c1.setWeightCap(297);
+//		
+//		Lighting l1 = new Lighting();
+//		l1.setLight(54);
+//		
+//		Spot s1= new Spot();
+//		
+//		s1.setChair(c1);
+//		s1.setPorridge(p1);
+//		s1.setLighting(l1);
+//		
+//		listOfSpots.add(s1);
 		
-		Spot s1= new Spot();
-		
-		s1.setChair(c1);
-		s1.setPorridge(p1);
-		s1.setLighting(l1);
-		
-		listOfSpots.add(s1);
 		gold1.justRight();
-		
-
 	}
-	
-	
-}
+	}
+

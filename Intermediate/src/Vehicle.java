@@ -34,4 +34,13 @@ public class Vehicle {
 		System.out.println("Vehicle is moving");
 	}
 	
+
+	@Override
+	public String toString() {
+		return "Vehicle [engineSize=" + engineSize + ", make=" + make + ", colour=" + colour + ", Type: ";
+	}
+	
+	
+	
+	
 }
