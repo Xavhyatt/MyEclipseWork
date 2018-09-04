@@ -1,7 +1,13 @@
+import java.util.Random;
 
 public class Blackjack {
 
-	public static int blackjack(int a, int b) {
+	public int blackjack(int a, int b) {
+		
+	Random rand = new Random();
+//	int a = rand.nextInt(42);
+//	int b = rand.nextInt(42);
+		
 		
 		int c = 0;
 		
@@ -24,9 +30,13 @@ public class Blackjack {
 
 		
 	public static void main(String[] args) {
+		Blackjack b = new Blackjack();
 		
-		System.out.println(blackjack(20,22));
+		System.out.println(b.blackjack(10,17));
+		
+		
 
 	}
+	
 
 }

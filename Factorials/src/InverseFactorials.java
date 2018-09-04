@@ -14,7 +14,7 @@ public class InverseFactorials {
 			}
 			if (a==i) 
 			{
-			System.out.println((int)i+"!");
+			System.out.println((int)i+"!"); 
 			}
 			
 			else if (a<i)
@@ -26,12 +26,13 @@ public class InverseFactorials {
 	}
 		
 	
-	public static void main(String[]args) {
+	public static void main(Strings2[]args) {
 		
 		int a = 120;
 		
 		inverseFact(a);
 		
-		
+		System.out.println(RecursionFact.recursionFact(10));
+//		System.out.println(RecursionFact.invRecursionFact(120)); 
 	}
 }

@@ -7,6 +7,10 @@ public class UniqueSum {
 		if (a!=b & a!=c & b!=c) {
 			d = a + b + c;
 		}
+		
+		else if (a==b & b==c) {
+			return d;
+		}
 		else if  (a==b) {
 			return c;
 		}
@@ -16,7 +20,7 @@ public class UniqueSum {
 		else if (b==c) {
 			return a;
 		}
-		
+					
 		return d;
 	}
 	
@@ -26,7 +30,7 @@ public class UniqueSum {
 
 	public static void main(String[] args) {
 		
-		System.out.println(uniqueSum(1,2,3));
+		System.out.println(uniqueSum(1,1,1));
 	}
 
 }

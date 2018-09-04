@@ -5,7 +5,7 @@ public class Cheapo {
 	private int size = 20;
 	private double volumeOfPaint;
 	private int coveragePerLitre = 10;
-	
+	private int numberOfCans;
 	
 	public double totalCost(double coverage) {
 		
@@ -13,6 +13,7 @@ public class Cheapo {
 		double numberOfCans=  volumeOfPaint / size;
 		
 		if (numberOfCans == (int) numberOfCans) {
+			this.setNumberOfCans((int) numberOfCans);
 			double totalCost = numberOfCans * price;
 			return totalCost;
 		}
@@ -20,6 +21,7 @@ public class Cheapo {
 		else {
 		
 		numberOfCans = (int) ((volumeOfPaint / size) + 1);
+		this.numberOfCans = (int) numberOfCans;
 		double totalCost = numberOfCans * price;
 		return totalCost;
 		}
@@ -42,6 +44,15 @@ public class Cheapo {
 			return leftOver;
 		}
 	}
+
+	public int getNumberOfCans() {
+		return numberOfCans;
+	}
+
+	public void setNumberOfCans(int numberOfCans) {
+		this.numberOfCans = numberOfCans;
+	}
+	
 }
 	
 		

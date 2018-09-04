@@ -10,7 +10,6 @@ public class Runner {
 //		String dblInput = s1.next();
 		
 		
-
 		double dblInput = sc.nextDouble();
 
 		Room r1 = new Room(dblInput);
@@ -24,16 +23,16 @@ public class Runner {
 		double costD = d1.totalCost(r1.getWallVolume());
 
 		if (costC < costA & costC < costD) {
-			System.out.println("Cheapo is the Cheapest Option at : " + costC);
+			System.out.println("Cheapo is the Cheapest Option at : " + costC + " You will need "+ c1.getNumberOfCans() + " Cans");
 
 		}
 
 		else if (costA < costC & costA < costD) {
-			System.out.println("AverageJoe is the Cheapest Option at : " + costA);
+			System.out.println("AverageJoe is the Cheapest Option at : " + costA + " You will need "+ a1.getNumberOfCans()+" Cans");
 		}
 
 		else if (costD < costA & costD < costA) {
-			System.out.println("Dulux is the Cheapest Option at : " + costD);
+			System.out.println("Dulux is the Cheapest Option at : " + costD + " You will need " + d1.getNumberOfCans() + " Cans");
 		}
 
 		double leftC = c1.leftOver(r1.getWallVolume());
